@@ -1187,7 +1187,7 @@ function focusFirst(candidates: HTMLElement[]) {
 function removeFromTabOrder(candidates: HTMLElement[]) {
   candidates.forEach((candidate) => {
     candidate.dataset.tabindex = candidate.getAttribute('tabindex') || '';
-    candidate.setAttribute('tabindex', '-1');
+    candidate.setAttribute('tabindex', '0');
   });
   return () => {
     candidates.forEach((candidate) => {
